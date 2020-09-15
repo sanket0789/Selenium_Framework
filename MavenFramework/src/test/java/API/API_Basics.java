@@ -3,8 +3,11 @@ package API;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+
+import org.junit.Assert;
 
 import Files.Payload;
 
@@ -64,6 +67,8 @@ public class API_Basics {
 		String ActualAddress = Js1.getString("address");
 		
 		System.out.println(ActualAddress);
+		
+		Assert.assertEquals(NewAddress, ActualAddress);
 		 
 		
 		
