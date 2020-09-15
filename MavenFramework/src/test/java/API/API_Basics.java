@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.*;
 import org.junit.Assert;
 
 import Files.Payload;
+import Files.ReUsableMethods;
 
 
 public class API_Basics {
@@ -63,16 +64,11 @@ public class API_Basics {
 		String Get=given().log().all().queryParam("key", "qaclick123").queryParam("place_id", PlaceId)
 		.when().get("maps/api/place/get/json").then().assertThat().log().all().statusCode(200).extract().response().asString();
 		
-		JsonPath Js1 = new JsonPath(Get);
+		JsonPath Js1 = ReUsableMethods.rawToJson(Get);
 		String ActualAddress = Js1.getString("address");
-		
 		System.out.println(ActualAddress);
-		
 		Assert.assertEquals(NewAddress, ActualAddress);
 		 
-		
-		
-		
 	}
 
 }
