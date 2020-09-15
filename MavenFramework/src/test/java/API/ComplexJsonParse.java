@@ -64,6 +64,12 @@ public class ComplexJsonParse {
 			
 		}
 		
+		//Test 6 : Verify if sum of all courses prices matches with purchase amount.
+		
+		for(int i=0; i<count; i++) 
+		{
+			
+		}
 		
 
 	}
