@@ -9,8 +9,8 @@ import static org.hamcrest.Matchers.*;
 
 import org.junit.Assert;
 
-import Files.Payload;
-import Files.ReUsableMethods;
+import API_Files.Payload;
+import API_Files.ReUsableMethods;
 
 
 public class API_Basics {
